@@ -1,7 +1,5 @@
-# gKeyHelper
-
-Simple and flexible helper for AutoHotKey bindings
-Six different modes to experiment with
+#singleinstance force
+#include %A_ScriptDir%\gKeyHelper.ahk
 
 /*
 ;
@@ -37,3 +35,18 @@ Six different modes to experiment with
 
 myF1Key := new gKeyHelper(0x0010, "F1 up", ["ASDF", "1234", "XYZ"])
 myF2Key := new gKeyHelper(0x0011, "F2", ["action1", "action2", "action3"])
+
+ESC::
+ExitApp
+
+action1:
+	send {x}
+Return
+
+action2:
+	send {y}
+Return
+
+action3:
+	send {z}
+Return
